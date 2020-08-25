@@ -1,13 +1,12 @@
 fun main() {
-    val hyper = "Hyper Skill"
+    val name = readLine()!!
 
-    println(nameTag(hyper))
+    println(nameTag(name))
 }
 
 fun nameTag(name: String): String {
-    val top = " " + "_".repeat(name.length + 2) + "\n"
-    val middle = "| $name |\n"
-    val bottom = " " + "•".repeat(name.length + 2)
+    val topBottom = "*".repeat(name.length + 4)
+    val middle = "* $name *\n"
 
-    return top + middle + bottom
+    return topBottom + "\n" + middle + topBottom
 }
